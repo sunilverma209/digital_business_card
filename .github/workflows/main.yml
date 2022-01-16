@@ -1,0 +1,18 @@
+on: 
+  push:
+    branches:
+      -master
+name: Production Deploy
+jobs:
+  FTP Deploy Action:
+    name: FTP Deploy Action
+    runs-on: ubuntu-latest
+    steps:
+      uses: actions/checkout@v2
+    
+    - name: Sync files
+      uses: sunilverma209/FTP-Deploy-Action@4.2.0
+      with:
+        server: ${{ secrets.PROD_FTP_HOST }}
+        username: ${{ secrets.PROD_FTP_USERNAME }}
+        password: ${{ secrets.PROD_FTP_PASSWORD }}
