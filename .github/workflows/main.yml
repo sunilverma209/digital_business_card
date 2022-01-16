@@ -4,7 +4,7 @@ on:
       -master
 name: Production Deploy
 jobs:
-  FTP Deploy Action:
+  web-deploy:
     name: FTP Deploy Action
     runs-on: ubuntu-latest
     steps:
