@@ -1,0 +1,19 @@
+on: 
+  push:
+    branches: [ master ]
+name: Production Deploy
+jobs:
+  web-deploy:
+    name: FTP Deploy Action
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get Latest Code
+      uses: actions/checkout@v2
+    # Here is the deployment action
+    - name: Upload from public_html via FTP
+      uses: sunilverma209/digital_business_card
+      with:
+        server: ${{ secrets.PROD_FTP_HOST }}
+        username: ${{ secrets.PROD_FTP_USERNAME }}
+        password: ${{ secrets.PROD_FTP_PASSWORD }}
+        local_dir: "./public_html"
