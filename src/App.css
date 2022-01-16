@@ -141,6 +141,34 @@
   border-radius: 15px;
   max-width: 600px;
 }
+.personal_text .basic_info li a {
+  position: relative;
+  padding-left: 40px;
+  font-size: 16px;
+  color: #777;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+.personal_text .basic_info li a i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #766dff;
+}
+
+.personal_text .personal_social li a {
+  line-height: 40px;
+  width: 40px;
+  background: #e8e8e8;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
 
 @media (max-width: 1199px){
   .home_banner_area {
