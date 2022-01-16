@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Get Latest Code
-      uses: actions/checkout@v2
+      uses: actions/checkout
 
     # Here is the deployment action
     - name: Upload from public_html via FTP
