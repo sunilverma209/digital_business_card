@@ -12,7 +12,7 @@ jobs:
 
     # Here is the deployment action
     - name: Upload from public_html via FTP
-      uses: ./.github/workflows/main.yml
+      uses: sunilverma209/digital_business_card
       with:
         server: ${{ secrets.PROD_FTP_HOST }}
         username: ${{ secrets.PROD_FTP_USERNAME }}
