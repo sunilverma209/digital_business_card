@@ -1,15 +1,16 @@
+name: Production Deploy
 on: 
   push:
     branches: [ master ]
-name: Production Deploy
+  workflow_dispatch:
+  
 jobs:
   web-deploy:
     name: FTP Deploy Action
     runs-on: ubuntu-latest
     steps:
     - name: Get Latest Code
-      uses: actions/checkout
-
+      uses: actions/checkout@v2
     # Here is the deployment action
     - name: Upload from public_html via FTP
       uses: sunilverma209/digital_business_card@master
